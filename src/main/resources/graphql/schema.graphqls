@@ -16,7 +16,7 @@ type City {
 
 type Query {
   allStates: [State]
-  findStateByAbbreviation(@Argument String abbreviation)
+  findStateByAbbreviation(abbreviation: String): State
   findState(abbreviation: String, fullName: String, capital: String, id: Int): State
   allCities: [City]
   findCities(abbreviation: String, citySize: String): [City]
