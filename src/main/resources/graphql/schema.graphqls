@@ -15,9 +15,11 @@ type City {
 }
 
 type Query {
+  allStates: [State]
+  findStateByAbbreviation(@Argument String abbreviation)
   findState(abbreviation: String, fullName: String, capital: String, id: Int): State
-  findCities(abbreviation: String, citySize: String): [City]
   allCities: [City]
+  findCities(abbreviation: String, citySize: String): [City]
 }
 
 type Mutation {
