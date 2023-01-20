@@ -18,7 +18,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "city")
-//@Where(clause = "active = true")
 public class City {
 
 	@Id
