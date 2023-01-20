@@ -19,6 +19,11 @@ public class StateController {
 	}
 	
 	@QueryMapping
+	public List<City> allStates() {
+  		return stateService.findAll();
+	}
+	
+	@QueryMapping
 	public State stateByAbbreviation(@Argument String abbreviation) {
 		return service.findByAbbreviation(abbreviation);
 	}
