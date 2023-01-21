@@ -1,0 +1,27 @@
+type City {
+  id: Int
+  name: String
+  state: State
+  size: String
+  active: Boolean
+}
+
+type State {
+  id: Int
+  fullName: String
+  abbreviation: String
+  capital: String
+  cities: [City]
+}
+
+type Query {
+  allCities: [City]
+  findCities(abbreviation: String, citySize: String): [City]
+  allStates: [State]
+  findStateByAbbreviation(abbreviation: String): State
+  findState(abbreviation: String, fullName: String, capital: String, id: Int): State
+}
+
+type Mutation {
+  createCity(name: String!, size: String!, stateId: Int!): City!
+}
