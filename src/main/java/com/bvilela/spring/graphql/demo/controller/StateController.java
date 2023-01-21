@@ -1,5 +1,6 @@
 package com.bvilela.spring.graphql.demo.controller;
 
+import java.util.List;
 import java.util.Objects;
 
 import org.springframework.graphql.data.method.annotation.Argument;
@@ -19,12 +20,12 @@ public class StateController {
 	}
 	
 	@QueryMapping
-	public List<City> allStates() {
-  		return stateService.findAll();
+	public List<State> allStates() {
+  		return service.findAll();
 	}
 	
 	@QueryMapping
-	public State stateByAbbreviation(@Argument String abbreviation) {
+	public State findStateByAbbreviation(@Argument String abbreviation) {
 		return service.findByAbbreviation(abbreviation);
 	}
 	

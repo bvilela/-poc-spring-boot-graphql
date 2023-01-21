@@ -29,5 +29,7 @@ INSERT INTO state (id, full_name, abbreviation, capital) VALUES (28, 'Distrito F
 set mode Oracle;
 INSERT INTO city (id, name, size, state_id, active) VALUES ((select CITY_SEQ.nextval from dual), 'São Paulo', 'Big', 24, true);
 INSERT INTO city (id, name, size, state_id, active) VALUES ((select CITY_SEQ.nextval from dual), 'Campinas', 'Big', 24, true);
+INSERT INTO city (id, name, size, state_id, active) VALUES ((select CITY_SEQ.nextval from dual), 'Sorocaba', 'Big', 24, true);
+INSERT INTO city (id, name, size, state_id, active) VALUES ((select CITY_SEQ.nextval from dual), 'Santos', 'Big', 24, true);
 INSERT INTO city (id, name, size, state_id, active) VALUES ((select CITY_SEQ.nextval from dual), 'Bauru', 'Medium', 24, true);
-INSERT INTO city (id, name, size, state_id, active) VALUES ((select CITY_SEQ.nextval from dual), 'Jurupema', 'Small', 24, true);
+INSERT INTO city (id, name, size, state_id, active) VALUES ((select CITY_SEQ.nextval from dual), 'Holambra', 'Small', 24, true);

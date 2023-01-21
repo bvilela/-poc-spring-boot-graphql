@@ -14,11 +14,5 @@ PoC Spring Boot and GraphQL
 - Spring GraphQL
 
 ### Examples
-```
-curl --request POST \
-  --url http://localhost:8080/graphql \
-  --header 'accept: application/json, multipart/mixed' \
-  --header 'content-type: application/json' \
-  --data '{"query":"query {\n  allCities {\n    id\n    name\n    size\n    state {\n      id\n      abbreviation\n      fullName\n    }\n  }\n}"}'
-```
-![example01](images/example01.png)
+
+See documentation folder.

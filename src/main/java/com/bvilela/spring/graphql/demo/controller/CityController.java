@@ -23,14 +23,15 @@ public class CityController {
 	}
 	
 	@QueryMapping
-	public List<City> findCities(@Argument String abbreviation, @Argument String citySize) {
-		return cityService.findCities(abbreviation, citySize);
-	}
-	
-	@QueryMapping
 	public List<City> allCities() {
 		return cityService.findAll();
 	}
+	
+	@QueryMapping
+	public List<City> findCities(@Argument String abbreviation, @Argument String citySize) {
+		return cityService.findCities(abbreviation, citySize);
+	}
+
 	
 	@MutationMapping
 	public City createCity(@Argument String name, @Argument String size, @Argument Integer stateId) {
